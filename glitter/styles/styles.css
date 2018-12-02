@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+section {
+    position: relative;
+}
+
+h1 {
+    text-transform: lowercase;
+    font-size: 20px;
+    margin: 50px 0;
+    letter-spacing: -6px;
+    font-size: 120px;
+    line-height: 80%;
+    color: #282828;
+    margin-top: 70px;
+    width: 500px;
+}
+
+
+.glitter {
+    width: 400px;
+    height: 340px;
+    background-image: url(../images/glitter.gif);
+    background-size: 800px;
+    position: absolute;
+    bottom: -100px;
+    left: 400px;
+    background-color: #d2ced2;
+    background-blend-mode: screen;
+    -webkit-mask-image: url(../images/splash.svg);
+    mask-image: url(../images/splash.svg);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    z-index: 10;
+}
+
+.glitter-shadow {
+    width: 400px;
+    height: 340px;
+    left: 400px;
+    bottom: -100px;
+    position: absolute;
+}
+
+.glitter-shadow::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 340px;
+    background: rgba(0,0,0,0.6);
+    -webkit-mask-image: url(../images/splash.svg);
+    mask-image: url(../images/splash.svg);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    z-index: 0;
+    left: -20px;
+    top: 10px;
+}
